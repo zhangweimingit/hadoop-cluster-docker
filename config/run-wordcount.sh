@@ -17,8 +17,8 @@ hdfs dfs -put ./input/* input
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.1.0.jar \
     -input input \
     -output output \
-    -mapper mapperC \
-    -reducer reduceC
+    -mapper ~/mapperC \
+    -reducer ~/reduceC
 
 # print the input files
 echo -e "\ninput file1.txt:"
