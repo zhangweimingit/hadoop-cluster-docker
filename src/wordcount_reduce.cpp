@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 
     for(it = count.begin(); it != count.end(); it++)
     {
-        cout << it->first << "/t" << it->second << endl;
+        cout << it->first << "\t" << it->second << endl;
     }
     return 0;
 }
