@@ -14,7 +14,7 @@ hadoop fs -mkdir -p input
 hdfs dfs -put ./input/* input
 
 # run wordcount 
-hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.1.0.jar
+hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.1.0.jar \
     -input input \
     -output output \
     -mapper mapperC \
