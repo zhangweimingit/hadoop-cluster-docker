@@ -1,11 +1,11 @@
 FROM ubuntu:16.04
 
-MAINTAINER ikuai8 <wmzhang@ikuai8.com>
+MAINTAINER ikuai8 <yun@ikuai8.com>
 
 WORKDIR /root
 
-# install openssh-server, openjdk and wget
-RUN apt-get update && apt-get install -y openssh-server openjdk-8-jdk wget
+# install openssh-server, openjdk vim and wget
+RUN apt-get update && apt-get install -y openssh-server openjdk-8-jdk wget vim
 
 # install hadoop 3.1.0
 RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.0/hadoop-3.1.0.tar.gz && \
@@ -27,6 +27,8 @@ RUN mkdir -p ~/hdfs/namenode && \
     mkdir $HADOOP_HOME/logs
 
 COPY config/* /tmp/
+COPY mapperC  /root/
+COPY reduceC  /root/
 
 RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \

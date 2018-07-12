@@ -3,6 +3,10 @@
 echo ""
 
 echo -e "\nbuild docker hadoop image\n"
-sudo docker build -t wmzhang/hadoop:1.0 .
+
+g++ -o mapperC src/wordcount_map.cpp
+g++ -o reduceC src/wordcount_reduce.cpp
+
+docker build -t wmzhang/hadoop:1.0 .
 
 echo ""
