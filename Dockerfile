@@ -4,8 +4,8 @@ MAINTAINER ikuai8 <yun@ikuai8.com>
 
 WORKDIR /root
 
-# install openssh-server, openjdk vim and wget
-RUN apt-get update && apt-get install -y openssh-server openjdk-8-jdk wget vim
+# install openssh-server, openjdk and wget
+RUN apt-get update && apt-get install -y openssh-server openjdk-8-jdk wget
 
 # install hadoop 3.1.0
 RUN wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.0/hadoop-3.1.0.tar.gz && \
