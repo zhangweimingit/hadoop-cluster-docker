@@ -23,6 +23,6 @@ echo ""
 echo -e "\nbuild docker hadoop image\n"
 
 # rebuild wmzhang/hadoop image
-docker build -t wmzhang/hadoop:1.0 .
+docker build -t hadoop:1.0 .
 
 echo ""
