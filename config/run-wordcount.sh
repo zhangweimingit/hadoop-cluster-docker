@@ -2,16 +2,11 @@
 
 # test the hadoop cluster by running wordcount
 
-# create input files 
-mkdir input
-echo "Hello Docker" >input/file2.txt
-echo "Hello Hadoop" >input/file1.txt
-
 # create input directory on HDFS
 hadoop fs -mkdir -p input
 
 # put input files to HDFS
-hdfs dfs -put ./input/* input
+hdfs dfs -put ./data/* input
 
 # run wordcount 
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.1.0.jar \
