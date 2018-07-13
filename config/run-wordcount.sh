@@ -6,7 +6,7 @@
 hadoop fs -mkdir -p input
 
 # put input files to HDFS
-hdfs dfs -put ./input/* input
+hdfs dfs -put ./data/input/* input
 
 # run wordcount 
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.1.0.jar \
@@ -15,7 +15,7 @@ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.1.0.jar \
     -mapper ~/mapperC \
     -reducer ~/reduceC
 
-hdfs dfs -get output/* ./output
+hdfs dfs -get output/* ./data/output
 # print the input files
 #echo -e "\ninput file1.txt:"
 #hdfs dfs -cat input/file1.txt
