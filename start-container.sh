@@ -11,7 +11,7 @@ docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
-                -v /ikuai/home/wmzhang/data:/root/data
+                -v /ikuai/home/wmzhang/data:/root/data \
                 --name hadoop-master \
                 --hostname hadoop-master \
                 hadoop:1.0 &> /dev/null
